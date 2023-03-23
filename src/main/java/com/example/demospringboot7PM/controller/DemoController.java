@@ -74,6 +74,20 @@ public class DemoController {
        return students;
 
     }
+    @RequestMapping("/range")
+    public String inputRange(){
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Please enter range of number to check even ");
+        int range=scanner.nextInt();
+        String output="";
+        for(int i=1; i<range;i++){
 
+            if(i%2==0){
+             output+=i+ " is Even  Number ";
+            }
+        }
+
+        return output;
+    }
 
 }
