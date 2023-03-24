@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoSpringboot7PmApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(DemoSpringboot7PmApplication.class, args);
 	}
 

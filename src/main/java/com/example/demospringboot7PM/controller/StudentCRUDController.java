@@ -3,14 +3,17 @@ package com.example.demospringboot7PM.controller;
 import com.example.demospringboot7PM.model.Student;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 @RestController
 public class StudentCRUDController {
 
-    HashSet<Student> studentsInfo= new HashSet<>();
+    ArrayList<Student> studentsInfo= new ArrayList<>();
     @RequestMapping("/add_students")
     public Student create(@RequestBody Student student){
 
@@ -27,16 +30,29 @@ public class StudentCRUDController {
         return student;
     }
     @RequestMapping("/update_student")
-    public Student update(@RequestBody Student student){
+    public String  update(@RequestParam int index, @RequestParam String name){
 
-        studentsInfo.remove(student);
-        studentsInfo.add(student);
+        Student student= studentsInfo.get(index);
+        student.setName(name);
+//        student.setAge(age);
+//        student.setRoll_no(roll);
+//        student.setDepartment(department);
 
-        return student;
+
+        return "Updated Successfully";
     }
     @RequestMapping("/studentsInfo")
-    public HashSet display(){
+    public ArrayList<Student> display(){
+
         return studentsInfo;
+    }
+    @RequestMapping("/check")
+    public String msg(){
+        String res="";
+        int c,a=4,b=4;
+        c=a+b;
+
+        return res;
     }
 
 }

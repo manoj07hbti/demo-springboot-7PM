@@ -28,5 +28,6 @@ public class PalindromeController {
 //        }
     }
         return "Palindrome Numbers:  "+output;
+
     }
 }
