@@ -1,8 +1,10 @@
 package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.model.Employee;
+import com.example.demospringboot7PM.model.Student;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.spec.ECParameterSpec;
@@ -32,6 +34,14 @@ public class EmpWithNoDuplicateController {
                 return "Data Added Successfully";
             }
         }
+    }
+
+    @RequestMapping("/remove_emp")
+    public String remove(@RequestBody Employee employee){
+
+        empData.remove(employee);
+
+        return "Deleted Successfully";
     }
     @RequestMapping("/emp_list")
     public HashSet<Employee> display(){
