@@ -8,7 +8,7 @@ public class PrimeNumberController {
     @RequestMapping("/Prime_number")
     public String Prime() {
 
-        int num = 28, i = 2;
+        int num = 13, i = 2;
         boolean flag = true;
         String result = "";
 
