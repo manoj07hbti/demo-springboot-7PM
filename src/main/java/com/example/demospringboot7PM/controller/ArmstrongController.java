@@ -3,6 +3,8 @@ package com.example.demospringboot7PM.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @RestController
 public class ArmstrongController {
 @RequestMapping("/armstrong")
@@ -31,13 +33,17 @@ public class ArmstrongController {
              result=temp+"not a Armstrong Number";
         }
          return result;
-
-
-
-
-
-
-
     }
+
+
+
+
+
+
+
+
+
+
+
 
 }
