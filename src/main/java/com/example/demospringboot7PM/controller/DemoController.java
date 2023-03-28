@@ -105,14 +105,6 @@ public class DemoController {
         return output;
     }
 
-    @RequestMapping("/Armstrong")
-    public String Armstrong(){
 
-        Scanner scanner= new Scanner(System.in);
-
-        System.out.println("Please enter number to check Armstrong  ....");
-        int a = scanner.nextInt();
-        return msg;
-    }
 
 }
