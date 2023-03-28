@@ -12,7 +12,6 @@ public class Demo_Student {
     ArrayList<Student> list=new ArrayList<>();
 
     //creat data of  Students
-
     Student Student1 =new Student("Shekhar",23,"IT");
     Student Student2=new Student("karan",24,"Engineer");
 
