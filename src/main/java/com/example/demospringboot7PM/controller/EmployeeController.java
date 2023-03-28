@@ -2,10 +2,7 @@ package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.model.Employee;
 import com.example.demospringboot7PM.model.Student;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -14,7 +11,7 @@ public class EmployeeController {
 
     ArrayList<Employee> empinfo= new ArrayList<>();
 
-    @RequestMapping("/add_employee")
+    @RequestMapping(value = "/add_employee",method = RequestMethod.POST)
     public String add(@RequestBody Employee employee){
 
         empinfo.add(employee);
@@ -22,7 +19,7 @@ public class EmployeeController {
         return "Employee Added Successfully";
     }
 
-    @RequestMapping("/remove_employee")
+    @RequestMapping(value = "/remove_employee",method = RequestMethod.DELETE)
     public String remove(@RequestParam int index){
 
         empinfo.remove(index);
@@ -30,7 +27,7 @@ public class EmployeeController {
         return "Deleted Successfully";
     }
 
-    @RequestMapping("/display_emp")
+    @RequestMapping(value = "/display_emp",method = RequestMethod.GET)
     public ArrayList display(){
 
         return empinfo;

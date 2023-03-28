@@ -14,9 +14,6 @@ public class DemoCalculatorController {
     public String calculator(){
 
 
-
-        while(flag==0) {
-            try{
             String res = "";
             System.out.println("Please Enter value of a : ");
             Scanner obj = new Scanner(System.in);
@@ -45,15 +42,7 @@ public class DemoCalculatorController {
                 double c = (double) a / b;
                 return "Division is : " + c;
             }
-        }
-            finally {
-                Scanner newobj = new Scanner(System.in);
-                System.out.println("Do you want to continue : Press 0 to continue or Press any Number to Exit");
-                flag= newobj.nextInt();
-            }
-
-    }
-        return "Done";
+        return "Please Enter number between 1 to 4";
     }
 
 }

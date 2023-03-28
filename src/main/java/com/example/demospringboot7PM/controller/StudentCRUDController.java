@@ -16,7 +16,7 @@ import java.util.Set;
 public class StudentCRUDController {
 
     ArrayList<Student> studentsInfo= new ArrayList<>();
-    @RequestMapping("/add_students")
+    @RequestMapping(value = "/add_students", method = RequestMethod.POST)
     public Student create(@RequestBody Student student){
 
         studentsInfo.add(student);
@@ -24,14 +24,14 @@ public class StudentCRUDController {
         return student;
 
     }
-    @RequestMapping("/remove_student")
-    public String remove(@RequestBody Student student){
+    @RequestMapping(value = "/remove_student",method = RequestMethod.DELETE)
+    public String remove(@RequestParam int index){
 
-        studentsInfo.remove(student);
+        studentsInfo.remove(index);
 
         return "Deleted Successfully";
     }
-    @RequestMapping("/update_student")
+    @RequestMapping(value = "/update_student",method = RequestMethod.PUT)
     public String  update(@RequestBody Request request){
 
         int index=request.getIndex();
@@ -46,7 +46,7 @@ public class StudentCRUDController {
 
         return "Updated Successfully";
     }
-    @RequestMapping("/studentsInfo")
+    @RequestMapping(value = "/studentsInfo",method = RequestMethod.GET)
     public ArrayList<Student> display(){
 
         return studentsInfo;
