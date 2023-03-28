@@ -9,8 +9,6 @@ import java.util.ArrayList;
 public class Demo_Student {
 @RequestMapping
     public void student(){
-
-
     ArrayList<Student> list=new ArrayList<>();
 
     //creat data of  Students
