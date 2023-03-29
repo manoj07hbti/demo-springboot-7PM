@@ -49,11 +49,11 @@ public class CalculatorController {
     }
     @RequestMapping("/division/{a}/{b}")
     public String division(@PathVariable int a, @PathVariable int b){
-         int c;
+          double c;
 
          String result;
 
-         c=a/b;
+         c=(double)a/b;
 
          result = "division of "+a+" and "+b+" ="+c;
 
