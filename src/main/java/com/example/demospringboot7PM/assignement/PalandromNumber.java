@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class PalandromNumber {
     @RequestMapping("/Palindrom")
-    public void checcknumber(){
+    public String checcknumber(){
         Scanner sc = new Scanner(System.in);
         int number=sc.nextInt();
         int r;
@@ -20,10 +20,10 @@ public class PalandromNumber {
             number=number/10;
         }
         if(temp==sum){
-            System.out.println("this is palindrom number");
+           return "this is palindrom number "+number;
         }
         else {
-            System.out.println("this is not palindrom number");
+            return "this is not palindrom number "+number;
         }
     }
 }

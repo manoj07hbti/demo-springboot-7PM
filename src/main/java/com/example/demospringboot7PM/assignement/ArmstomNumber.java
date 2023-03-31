@@ -7,10 +7,10 @@ import java.util.Scanner;
 @RestController
 public class ArmstomNumber {
     @RequestMapping("/Armstrom")
-    public void CheckNumber() {
-
-        Scanner sc = new Scanner(System.in);
+    public String CheckNumber() {
+        Scanner sc =new Scanner(System.in);
         int number = sc.nextInt();
+
         int r;
         int originalNumber;
 
@@ -23,10 +23,10 @@ public class ArmstomNumber {
 
         }
         if(result==number){
-            System.out.println("this is armstrom number"+number);
+           return "this is armstrom number"+number;
         }
         else {
-            System.out.println("this is not armstrom number "+number);
+           return "this is not armstrom number "+number;
         }
 
     }
