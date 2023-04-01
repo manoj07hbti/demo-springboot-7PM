@@ -1,15 +1,11 @@
 package com.example.demospringboot7PM.controller;
 
-import com.example.demospringboot7PM.model.Employee;
+
 import com.example.demospringboot7PM.model.Request;
 import com.example.demospringboot7PM.model.Student;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 
 @RestController
@@ -51,13 +47,55 @@ public class StudentCRUDController {
 
         return studentsInfo;
     }
-//    @RequestMapping("/check")
-//    public String msg(){
-//        String res="";
-//        int c,a=4,b=4;
-//        c=a+b;
-//
-//        return res;
-//    }
+    @RequestMapping(value = "/getUsingRoll",method = RequestMethod.GET)
+    public Object findByRollNumber(@RequestParam int roll){
+        boolean flag=false;
+        ArrayList<Student> found= new ArrayList<>();
+        for (Student var : studentsInfo){
+            if (var.getRoll_no()==roll){
+                found.add(var);
+                flag=true;
+            }
+
+        }
+
+        if (flag){
+
+            return found;
+        }
+            return "Student not found";
+
+    }
+
+    @RequestMapping(value = "/getInRange",method = RequestMethod.GET)
+    public Object findInRange(@RequestParam int from, int to){
+
+        ArrayList<Student> found= new ArrayList<>();
+        boolean flag=false;
+        for (Student var : studentsInfo){
+            if (var.getRoll_no()>=from && var.getRoll_no()<=to){
+                found.add(var);
+                flag=true;
+            }
+        }
+        if (flag){
+            return found;
+        }
+
+        return "Please enter valid range";
+    }
+    @RequestMapping(value = "/update_new",method = RequestMethod.PUT)
+    public String update_new(@RequestParam int index,@RequestParam String name,@RequestParam int age,@RequestParam int roll,@RequestParam String department){
+
+        Student student= studentsInfo.get(index);
+
+        student.setName(name);
+        student.setAge(age);
+        student.setRoll_no(roll);
+        student.setDepartment(department);
+
+        return "Updated Successfully";
+
+    }
 
 }

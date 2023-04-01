@@ -22,7 +22,7 @@ public class AddStudentController {
             for (Student var : studentlist) {
                 if (var.hashCode() == st1.hashCode()) {
                     check = false;
-                    return "Duplicate";
+                    return "Duplicate roll number";
                 }
             }
             if (true) {

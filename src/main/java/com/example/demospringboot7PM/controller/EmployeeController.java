@@ -19,6 +19,16 @@ public class EmployeeController {
         return "Employee Added Successfully";
     }
 
+    @RequestMapping(value = "/update_employee",method = RequestMethod.PUT)
+    public String update(@RequestParam int index, String name){
+
+        Employee employee= empinfo.get(index);
+
+        employee.setName(name);
+
+        return "Updated Successfully";
+    }
+
     @RequestMapping(value = "/remove_employee",method = RequestMethod.DELETE)
     public String remove(@RequestParam int index){
 
@@ -32,6 +42,8 @@ public class EmployeeController {
 
         return empinfo;
     }
+
+
 
 
 }
