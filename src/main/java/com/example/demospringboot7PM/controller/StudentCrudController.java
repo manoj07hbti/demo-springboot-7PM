@@ -1,9 +1,7 @@
 package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.student.Student;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -12,7 +10,15 @@ public class StudentCrudController {
 
     ArrayList<Student> students= new ArrayList<>();
 
-    @RequestMapping("/add_student/{name}/{age}/{section}")
+    @PostMapping("/add_student_request")
+    public String addStudentRequestBody(@RequestBody Student student){
+
+        students.add(student);
+
+        return "Student details added successfully";
+    }
+
+    @PostMapping("/add_student/{name}/{age}/{section}")
     public String addStudent(@PathVariable String name ,@PathVariable int age,@PathVariable String section){
 
         // creating data of student
@@ -22,12 +28,12 @@ public class StudentCrudController {
         return "Student details added successfully";
     }
 
-    @RequestMapping("/get_students")
+    @GetMapping("/get_students")
     public ArrayList<Student>  getStudents(){
 
         return students;
     }
-    @RequestMapping("/update/{index}/{name}")
+    @PutMapping("/update/{index}/{name}")
     public String updateStudent(@PathVariable int index,@PathVariable String name){
 
       Student student=students.get(index);
@@ -35,7 +41,7 @@ public class StudentCrudController {
       return "Name updated successfully "+name;
     }
 
-    @RequestMapping("/delete_student/{index}")
+    @DeleteMapping("/delete_student/{index}")
     public String delete(@PathVariable int index){
 
         students.remove(index);
