@@ -2,9 +2,7 @@ package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.controller.Employee.Doctor;
 import com.example.demospringboot7PM.student.Student;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 @RestController
@@ -15,7 +13,7 @@ import java.util.ArrayList;
     //CURD
    //  C create or add
 
-    @RequestMapping("/add_doctor/{name}/{age}/{city}")
+    @PostMapping("/add_doctor/{name}/{age}/{city}")
 
     public String addDoctor(@PathVariable String name,@PathVariable int age,@PathVariable String city){
 
@@ -24,19 +22,19 @@ import java.util.ArrayList;
          return "Doctor details added successfully";
     }
 
-    @RequestMapping("/get_doctor")
+    @GetMapping("/get_doctor")
 
     public ArrayList<Doctor> getDoctors(){
 
         return doctors;
     }
-    @RequestMapping("/update/{index}/{name}")
+    @PutMapping("/update/{index}/{name}")
     public String updateDoctor(@PathVariable int index,@PathVariable String name){
         Doctor doctor =doctors.get(index);
         doctor.setName(name);
         return " Name updated Successfully"+name;
     }
-    @RequestMapping("/delete_doctor/{index}")
+    @DeleteMapping("/delete_doctor/{index}")
 
     public String deleteDoctor(@PathVariable int index){
 

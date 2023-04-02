@@ -25,6 +25,7 @@ import java.util.ArrayList;
 
      }
      @RequestMapping("/get_State")
+
      public ArrayList<String> getState(){
 
          return state;
