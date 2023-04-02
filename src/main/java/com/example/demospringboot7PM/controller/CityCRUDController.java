@@ -1,5 +1,6 @@
 package com.example.demospringboot7PM.controller;
 
+import com.example.demospringboot7PM.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +23,7 @@ public class CityCRUDController {
 
     @RequestMapping(value = "/get_city",method = RequestMethod.GET)
     public ArrayList getData(){
+
         return citylist;
     }
     @RequestMapping(value = "/city_update",method = RequestMethod.PUT)

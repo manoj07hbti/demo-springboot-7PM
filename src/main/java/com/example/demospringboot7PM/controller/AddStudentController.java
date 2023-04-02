@@ -1,10 +1,7 @@
 package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.model.Student;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 
@@ -13,7 +10,7 @@ public class AddStudentController {
 
     HashSet<Student> studentlist= new HashSet<>();
     boolean check=false;
-    @RequestMapping(value = "/add_student/{name}/{age}/{roll_no}/{department}",method = RequestMethod.POST)
+    @PostMapping("/add_student/{name}/{age}/{roll_no}/{department}")
     public String addStudent(@PathVariable String name,@PathVariable int age,@PathVariable int roll_no,@PathVariable String department){
 
         Student st1= new Student(name,age,roll_no,department);
@@ -31,7 +28,7 @@ public class AddStudentController {
             }
         }
     }
-    @RequestMapping(value = "/students_list",method = RequestMethod.GET)
+    @GetMapping("/students_list")
     public HashSet<Student> getDetails(){
 
         return studentlist;

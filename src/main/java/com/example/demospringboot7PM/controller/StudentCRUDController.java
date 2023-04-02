@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class StudentCRUDController {
 
     ArrayList<Student> studentsInfo= new ArrayList<>();
-    @RequestMapping(value = "/add_students", method = RequestMethod.POST)
+    @PostMapping("/add_students")
     public Student create(@RequestBody Student student){
 
         studentsInfo.add(student);
