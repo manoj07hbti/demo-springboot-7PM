@@ -1,6 +1,6 @@
-package com.example.demospringboot7PM.controller;
+package com.example.demospringboot7PM.controller.Employee;
 
-import com.example.demospringboot7PM.controller.Employee.Employee;
+import com.example.demospringboot7PM.Model.Employee;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

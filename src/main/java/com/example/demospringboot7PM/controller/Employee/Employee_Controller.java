@@ -1,4 +1,4 @@
-package com.example.demospringboot7PM.controller;
+package com.example.demospringboot7PM.controller.Employee;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

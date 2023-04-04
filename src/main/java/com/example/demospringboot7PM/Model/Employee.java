@@ -1,21 +1,18 @@
-package com.example.demospringboot7PM.controller.Employee;
+package com.example.demospringboot7PM.Model;
 
-public class Doctor {
+public class Employee {
 
     String name;
     int age;
     String city;
+    String dept;
 
-    public Doctor(String name, int age, String city) {
-
-
+    public Employee(String name, int age, String city, String dept) {
         this.name = name;
         this.age = age;
         this.city = city;
+        this.dept = dept;
     }
-
-    // getter setter
-
 
     public String getName() {
         return name;
@@ -41,6 +38,11 @@ public class Doctor {
         this.city = city;
     }
 
-    public void add(Doctor doctor) {
+    public String getDept() {
+        return dept;
+    }
+
+    public void setDept(String dept) {
+        this.dept = dept;
     }
 }
