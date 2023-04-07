@@ -9,21 +9,21 @@ import java.util.ArrayList;
 public class DoctorCrudControllerPostMapping {
     ArrayList<doctor> doctors= new ArrayList<>();
 
-    @PostMapping("/addDoctors_requestMapping/{name}/{age}/{spec}")
-    public String addDoctors(@PathVariable String name, @PathVariable int age, @PathVariable String spec){
-        doctor doctor = new doctor(name, age, spec);
+    @PostMapping("/addDoctors_requestMapping")
+    public String addDoctors_requestMapping(@RequestBody doctor doctor){
+
         doctors.add(doctor);
 
-        return "doctor added successfully" + name;
+        return "doctor added successfully";
     }
 
     @GetMapping("/getDoctors_requestMapping")
-    public ArrayList<doctor> getDoctors(){
+    public ArrayList<doctor> getDoctors_requestMapping(){
         return doctors;
     }
 
     @PutMapping("/updateDoctors_requestMapping/{index}/{name}")
-    public String updateDoctors(@PathVariable int index, @PathVariable String name){
+    public String updateDoctors_requestMapping(@PathVariable int index, @PathVariable String name){
         doctor doctor = doctors.get(index);
         doctor.setName(name);
 
@@ -31,7 +31,7 @@ public class DoctorCrudControllerPostMapping {
     }
 
     @DeleteMapping("/deleteDoctors_requestMapping")
-    public String deleteDoctors(@RequestParam int index){
+    public String deleteDoctors_requestMapping(@RequestParam int index){
 
         doctors.remove(index);
 
