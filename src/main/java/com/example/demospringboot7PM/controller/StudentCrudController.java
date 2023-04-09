@@ -1,7 +1,6 @@
 package com.example.demospringboot7PM.controller;
 
-import com.example.demospringboot7PM.Model.Employee;
-import com.example.demospringboot7PM.student.Student;
+import com.example.student.Student;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

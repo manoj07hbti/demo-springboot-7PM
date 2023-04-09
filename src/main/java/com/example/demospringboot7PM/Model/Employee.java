@@ -1,11 +1,21 @@
 package com.example.demospringboot7PM.Model;
 
-public class Employee {
+import javax.persistence.*;
 
+@Entity(name="EMPLOYEE_7pm")
+public class Employee {
+      @Id  //primary key it will unique
+     @GeneratedValue
+      long id;
     String name;
     int age;
     String city;
+    @Column(name="getSalary")
     String dept;
+
+    // default constructor
+    public Employee() {
+    }
 
     public Employee(String name, int age, String city, String dept) {
         this.name = name;
