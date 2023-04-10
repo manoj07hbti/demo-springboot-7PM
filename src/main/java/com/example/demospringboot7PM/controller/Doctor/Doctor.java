@@ -1,9 +1,23 @@
 package com.example.demospringboot7PM.controller.Doctor;
-public class Doctor {
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="Doctor_DB")
+public class Doctor {
+   @Id
+    @GeneratedValue
     String name;
     int age;
+    @Column(name="Specialist")
     String city;
+
+
+
+    public Doctor() {
+    }
 
     public Doctor(String name, int age, String city) {
 
