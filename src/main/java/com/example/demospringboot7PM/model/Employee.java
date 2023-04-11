@@ -1,13 +1,21 @@
 package com.example.demospringboot7PM.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
-
+@Entity
 public class Employee {
 
     String name;
+    @Id
+    @GeneratedValue
     int emp_id;
     String department;
     double salary;
+
+    public Employee() {
+    }
 
     @Override
     public boolean equals(Object o) {

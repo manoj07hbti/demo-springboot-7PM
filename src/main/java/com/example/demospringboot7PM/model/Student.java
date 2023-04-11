@@ -1,11 +1,22 @@
 package com.example.demospringboot7PM.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
-
+@Entity
 public class Student {
+    @Id
+    @GeneratedValue
+    long roll_no;
 
+    public Student() {
+    }
+
+    @Column(name = "Student_Name")
     String name;
-    int age, roll_no;
+    int age;
     String department;
 
     @Override
@@ -21,7 +32,7 @@ public class Student {
         return Objects.hash(roll_no);
     }
 
-    public Student(String name, int age, int roll_no, String department) {
+    public Student(String name, int age, long roll_no, String department) {
         this.name = name;
         this.age = age;
         this.roll_no = roll_no;
@@ -44,11 +55,11 @@ public class Student {
         this.age = age;
     }
 
-    public int getRoll_no() {
+    public long getRoll_no() {
         return roll_no;
     }
 
-    public void setRoll_no(int roll_no) {
+    public void setRoll_no(long roll_no) {
         this.roll_no = roll_no;
     }
 
