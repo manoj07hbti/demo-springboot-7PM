@@ -1,11 +1,19 @@
 // Model class for getting employee details
-package com.example.demospringboot7PM.employee;
+package com.example.demospringboot7PM.student.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import java.util.Objects;
+import javax.persistence.Id;
 
+@Entity(name="Employee_Table")
 public class Employee {
-    String Fname, Lname, Dept;
+    @Id //Primary key of the table
+    @GeneratedValue //
+
+    long Id;
     int EmpId;
+    String Fname, Lname, Dept;
 
     // Param Constructor
     public Employee(String fname, String lname, String dept, int empId) {
