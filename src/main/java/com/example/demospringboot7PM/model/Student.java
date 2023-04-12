@@ -1,4 +1,4 @@
-package com.example.demospringboot7PM.student;
+package com.example.demospringboot7PM.model;
 
 public class Student {
     String name;
