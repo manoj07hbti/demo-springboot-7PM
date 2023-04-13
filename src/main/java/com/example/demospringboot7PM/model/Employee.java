@@ -16,6 +16,9 @@ public class Employee {
     String department;
     double salary;
 
+    public Employee() {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
