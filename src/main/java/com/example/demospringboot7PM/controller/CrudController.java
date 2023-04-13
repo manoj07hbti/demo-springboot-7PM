@@ -15,7 +15,7 @@ public class CrudController {
 @RequestMapping("/add_course/{name}")
     public String add(@PathVariable String name){
         course.add(name);
-        return "Course is added sucessfully  " +name;
+        return "Course is added successfully  " +name;
 
     }
     @RequestMapping("/get_course")

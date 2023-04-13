@@ -1,6 +1,11 @@
 package com.example.demospringboot7PM.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Student {
+    @Id
     String name;
     int age;
     String section;

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 @RestController
 public class StudentCRUDController {
-
     ArrayList<Student>  data= new ArrayList<>();
 
     @RequestMapping("/add_student")
@@ -18,5 +17,6 @@ public class StudentCRUDController {
 
         return "added";
     }
+
 
 }
