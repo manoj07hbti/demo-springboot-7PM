@@ -25,7 +25,7 @@ public class EmployeeService {
         return repository.findAll();
     }
 
-    public String update(Integer emp_id, String name){
+    public String update(long emp_id, String name){
 
         Employee employee= repository.getById(emp_id);
 
@@ -36,7 +36,7 @@ public class EmployeeService {
 
     }
 
-    public String delete(Integer emp_id){
+    public String delete(long emp_id){
 
         repository.deleteById(emp_id);
 
@@ -46,6 +46,11 @@ public class EmployeeService {
     public Employee getUsingSalary(double salary){
 
         return repository.findBySalary(salary);
+    }
+
+    public Employee getUsingEmpId(long empId){
+
+        return repository.findByEmpId(empId);
     }
 
 }

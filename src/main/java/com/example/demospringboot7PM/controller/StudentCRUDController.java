@@ -36,7 +36,7 @@ public class StudentCRUDController {
 
         oldStudent.setName(newStudent.getName());
         oldStudent.setAge(newStudent.getAge());
-        oldStudent.setRoll_no(newStudent.getRoll_no());
+        oldStudent.setRollNo(newStudent.getRollNo());
         oldStudent.setDepartment(newStudent.getDepartment());
 
 
@@ -52,7 +52,7 @@ public class StudentCRUDController {
         boolean flag=false;
         ArrayList<Student> found= new ArrayList<>();
         for (Student var : studentsInfo){
-            if (var.getRoll_no()==roll){
+            if (var.getRollNo()==roll){
                 found.add(var);
                 flag=true;
             }
@@ -73,7 +73,7 @@ public class StudentCRUDController {
         ArrayList<Student> found= new ArrayList<>();
         boolean flag=false;
         for (Student var : studentsInfo){
-            if (var.getRoll_no()>=from && var.getRoll_no()<=to){
+            if (var.getRollNo()>=from && var.getRollNo()<=to){
                 found.add(var);
                 flag=true;
             }
@@ -91,7 +91,7 @@ public class StudentCRUDController {
 
         student.setName(name);
         student.setAge(age);
-        student.setRoll_no(roll);
+        student.setRollNo(roll);
         student.setDepartment(department);
 
         return "Updated Successfully";

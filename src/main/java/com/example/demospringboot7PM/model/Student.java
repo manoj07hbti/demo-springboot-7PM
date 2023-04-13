@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Student {
     @Id
     @GeneratedValue
-    long roll_no;
+    long rollNo;
 
     public Student() {
     }
@@ -24,18 +24,18 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return roll_no == student.roll_no;
+        return rollNo == student.rollNo;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(roll_no);
+        return Objects.hash(rollNo);
     }
 
-    public Student(String name, int age, long roll_no, String department) {
+    public Student(String name, int age, long rollNo, String department) {
         this.name = name;
         this.age = age;
-        this.roll_no = roll_no;
+        this.rollNo = rollNo;
         this.department = department;
     }
 
@@ -55,12 +55,12 @@ public class Student {
         this.age = age;
     }
 
-    public long getRoll_no() {
-        return roll_no;
+    public long getRollNo() {
+        return rollNo;
     }
 
-    public void setRoll_no(long roll_no) {
-        this.roll_no = roll_no;
+    public void setRollNo(long rollNo) {
+        this.rollNo = rollNo;
     }
 
     public String getDepartment() {

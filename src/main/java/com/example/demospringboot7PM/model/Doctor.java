@@ -12,13 +12,13 @@ public class Doctor {
     String name;
     @Id
     @GeneratedValue
-    int doc_id;
+    long doc_id;
     String department;
 
     public Doctor() {
     }
 
-    public Doctor(String name, int doc_id, String department) {
+    public Doctor(String name, long doc_id, String department) {
         this.name = name;
         this.doc_id = doc_id;
         this.department = department;
@@ -32,11 +32,11 @@ public class Doctor {
         this.name = name;
     }
 
-    public int getDoc_id() {
+    public long getDoc_id() {
         return doc_id;
     }
 
-    public void setDoc_id(int doc_id) {
+    public void setDoc_id(long doc_id) {
         this.doc_id = doc_id;
     }
 

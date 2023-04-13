@@ -39,8 +39,15 @@ public class EmployeeDBController {
     }
 
     @GetMapping("/using_emp_id")
-    public Employee getUsingEmp_id(@RequestParam Double salary){
+    public Employee getUsingSalary(@RequestParam Double salary){
 
         return service.getUsingSalary(salary);
     }
+
+    @GetMapping("/getUsingEmpId/{empId}")
+    public Employee getUsingEmpId(@PathVariable long empId){
+
+        return service.getUsingEmpId(empId);
+    }
+
 }

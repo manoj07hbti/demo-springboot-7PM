@@ -10,7 +10,7 @@ public class Employee {
     String name;
     @Id
     @GeneratedValue
-    long emp_id;
+    long empId;
     String department;
     double salary;
 
@@ -22,17 +22,17 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return emp_id == employee.emp_id;
+        return empId == employee.empId;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(emp_id);
+        return Objects.hash(empId);
     }
 
-    public Employee(String name, long emp_id, String department, double salary) {
+    public Employee(String name, long empId, String department, double salary) {
         this.name = name;
-        this.emp_id = emp_id;
+        this.empId = empId;
         this.department = department;
         this.salary = salary;
     }
@@ -45,12 +45,12 @@ public class Employee {
         this.name = name;
     }
 
-    public long getEmp_id() {
-        return emp_id;
+    public long getEmpId() {
+        return empId;
     }
 
-    public void setEmp_id(int emp_id) {
-        this.emp_id = emp_id;
+    public void setEmpId(long empId) {
+        this.empId = empId;
     }
 
     public String getDepartment() {
