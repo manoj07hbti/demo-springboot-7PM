@@ -15,6 +15,9 @@ public class doctor {
     int age;
     String specialiazation;
 
+    public doctor() {
+    }
+
     public doctor(String name, int age, String specialiazation) {
         this.name = name;
         this.age = age;
