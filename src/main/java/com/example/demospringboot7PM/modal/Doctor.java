@@ -14,7 +14,7 @@ public class Doctor {
     String name;
 
     int salary;
-    @Column(name="Income")
+
     String department;
 
     //create default constructor
