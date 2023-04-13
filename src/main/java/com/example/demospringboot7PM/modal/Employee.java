@@ -1,15 +1,30 @@
 package com.example.demospringboot7PM.modal;
 
-public class Employee {
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="Employee_DataBase")
+public class Employee {
+   @Id
+   @GeneratedValue
+  long employeeNo;
     String name;
 
     double salary;
 
+@Column(name="place")
     String location;
 
-    //constructor
+    // default constructor
 
+
+    public Employee() {
+    }
+
+    //parameterised constructor
     public Employee(String name, double salary, String location) {
         this.name = name;
         this.salary = salary;

@@ -1,16 +1,30 @@
 package com.example.demospringboot7PM.modal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="Doctor_DB")
 public class Doctor {
+    @Id// primary key it will be unique
+    @GeneratedValue // It will automatically generate id for every record
+    long id;
 
     String name;
 
     int salary;
-
+    @Column(name="Income")
     String department;
 
-    //create constructor
+    //create default constructor
 
 
+    public Doctor() {
+    }
+
+
+// parameterised constructor
     public Doctor(String name, int salary, String department) {
         this.name = name;
         this.salary = salary;
