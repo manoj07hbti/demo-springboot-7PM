@@ -20,4 +20,32 @@ public class EmployeeService {
         return "Data added successfully";
     }
 
+    public List<Employee> get(){
+
+        return repository.findAll();
+    }
+
+    public String update(Integer emp_id, String name){
+
+        Employee employee= repository.getById(emp_id);
+
+        employee.setName(name);
+        repository.save(employee);
+
+        return "Data successfully updated as name: "+name;
+
+    }
+
+    public String delete(Integer emp_id){
+
+        repository.deleteById(emp_id);
+
+        return "Record deleted successfully";
+    }
+
+    public Employee getUsingSalary(double salary){
+
+        return repository.findBySalary(salary);
+    }
+
 }

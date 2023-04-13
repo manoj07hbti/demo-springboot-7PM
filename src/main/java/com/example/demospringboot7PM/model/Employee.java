@@ -10,7 +10,7 @@ public class Employee {
     String name;
     @Id
     @GeneratedValue
-    int emp_id;
+    long emp_id;
     String department;
     double salary;
 
@@ -30,7 +30,7 @@ public class Employee {
         return Objects.hash(emp_id);
     }
 
-    public Employee(String name, int emp_id, String department, double salary) {
+    public Employee(String name, long emp_id, String department, double salary) {
         this.name = name;
         this.emp_id = emp_id;
         this.department = department;
@@ -45,7 +45,7 @@ public class Employee {
         this.name = name;
     }
 
-    public int getEmp_id() {
+    public long getEmp_id() {
         return emp_id;
     }
 
