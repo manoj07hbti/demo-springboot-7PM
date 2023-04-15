@@ -2,6 +2,7 @@ package com.example.demospringboot7PM.controller;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -18,10 +19,15 @@ public class CrudController {
         return "Course is added successfully  " +name;
 
     }
+
+    //R - Read and get
     @RequestMapping("/get_course")
-    public ArrayList<String> getCourse() {
+    public ArrayList<String> getCourse()  {
         return course;
     }
+
+    //U- Update
+
     @RequestMapping("/update_index/{index}/{name}")
     public String updateCourse( @PathVariable int index,@PathVariable String name){
     course.set(index, name);
@@ -30,7 +36,7 @@ public class CrudController {
     }
 
     @RequestMapping("/delete_courser/{name}")
-    public String deleteCourse(@PathVariable int index){
+    public String deleteCourse(@RequestParam int index){
     course.remove(index);
     return "Course deleted successfully ";
     }
