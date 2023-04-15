@@ -31,6 +31,17 @@ public class StudentDbController {
       return   service.fetchALlStudents();
     }
 
+    @GetMapping("/student/{id}/{name}")
+    public Student getStudent(@PathVariable long id,@PathVariable String name){
+
+        return service.getStudent(id,name);
+    }
+    @GetMapping("/student/{section}")
+    public List<Student> getStudentBySection(@PathVariable String section){
+
+        return service.getStudentBySection(section);
+    }
+
     //U- update
     @PutMapping("/student/{id}/{name}")
     public String updateInfo(@PathVariable long id,@PathVariable String name){

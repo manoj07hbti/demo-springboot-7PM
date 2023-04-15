@@ -40,4 +40,14 @@ public class StudentService {
 
         return "Data deleted Successfully ...";
     }
+
+    public Student getStudent(long id , String name){
+
+        return repository.findByIdAndName(id,name);
+    }
+
+    public List<Student> getStudentBySection(String section){
+
+        return repository.findBySection(section);
+    }
 }
