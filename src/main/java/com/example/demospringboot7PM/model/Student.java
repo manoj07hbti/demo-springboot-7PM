@@ -1,14 +1,12 @@
 package com.example.demospringboot7PM.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 @Entity
 public class Student {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "rollNo")
+    @SequenceGenerator(name = "rollNo", sequenceName = "rollNo", initialValue = 1,allocationSize = 1)
     long rollNo;
 
     public Student() {

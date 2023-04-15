@@ -3,30 +3,31 @@ package com.example.demospringboot7PM.model;
 import javax.persistence.*;
 
 @Entity
-public class Doctor {
+public class Engineer {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "docId")
-    @SequenceGenerator(name = "docId", sequenceName = "docId", initialValue = 1,allocationSize = 1)
-    long docId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "Id")
+    @SequenceGenerator(name = "Id",sequenceName = "Id",initialValue = 1,allocationSize = 1)
+    long Id;
 
     String name;
     String department;
 
-    public Doctor() {
+    public Engineer() {
     }
 
-    public Doctor(long docId, String name, String department) {
-        this.docId = docId;
+    public Engineer(long id, String name, String department) {
+        Id = id;
         this.name = name;
         this.department = department;
     }
 
-    public long getDocId() {
-        return docId;
+    public long getId() {
+        return Id;
     }
 
-    public void setDocId(long docId) {
-        this.docId = docId;
+    public void setId(long id) {
+        Id = id;
     }
 
     public String getName() {
