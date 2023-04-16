@@ -1,24 +1,35 @@
 package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.Model.Employee;
-import com.example.demospringboot7PM.repository.EmployeeRepository;
+import com.example.demospringboot7PM.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-  @RestController
+import java.util.List;
+
+@RestController
 public class EmployeeDBController {
 
       @Autowired
+      EmployeeService service;
 
-      EmployeeRepository repository;
-  @PostMapping("/Emp_DB")
+  @PostMapping("/Employee_DB")
     public String add(@RequestBody Employee employee){
 
-        repository.save(employee);
+        service.add(employee);
 
         return "Employee added Successfully";
+
+    }
+    @GetMapping("/Employees_DB")
+
+    public List<Employee> fetchAllEmployee(){
+
+        return  service.fetchAllEmployee();
+
+    }
+    @PutMapping("/Employee/{Id}/{name}")
+    public void updateInfo(@PathVariable Long Id,@PathVariable String name){
 
 
 

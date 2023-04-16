@@ -4,6 +4,6 @@ public class Test {
 
     public static void main(String[] args) {
 
-        System.out.println("This is for git checkin demo");
+        System.out.println("This is for git checking demo");
     }
 }

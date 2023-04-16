@@ -1,6 +1,5 @@
 package com.example.demospringboot7PM.controller.Doctor;
 
-import com.example.demospringboot7PM.controller.Doctor.Doctor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
