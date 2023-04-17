@@ -4,6 +4,7 @@ import com.example.demospringboot7PM.Model.Employee;
 import com.example.demospringboot7PM.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import java.util.List;
@@ -23,16 +24,22 @@ public class EmployeeService {
 
             return repository.findAll();
       }
-      @PutMapping("/")
-      public void updateInfo(Long id,String name){
+      @PutMapping("/Employee")
+      public String updateInfo(Long id,String name){
 
        Employee employee =repository.getById(id);
        employee.setName(name);
+       repository.save(employee);
 
+       return "Date have been update Successfully";
 
+      }
+      @DeleteMapping
+      public String removeEmployee(long id){
 
+        repository.deleteById(id);
 
-
+        return "Data delete successfully";
       }
 
 

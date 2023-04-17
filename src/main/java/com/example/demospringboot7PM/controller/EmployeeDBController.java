@@ -28,10 +28,15 @@ public class EmployeeDBController {
         return  service.fetchAllEmployee();
 
     }
-    @PutMapping("/Employee/{Id}/{name}")
-    public void updateInfo(@PathVariable Long Id,@PathVariable String name){
+    @PutMapping("/employee/{Id}/{name}")
+    public String  updateInfo(@PathVariable Long Id,@PathVariable String name){
 
+      return service.updateInfo(Id,name);
+    }
+    @DeleteMapping("/delete/{id}")
+    public String remove(@PathVariable long id){
 
+      return service.removeEmployee(id);
 
 
     }
