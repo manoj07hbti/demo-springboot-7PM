@@ -56,4 +56,10 @@ public class StudentDbController {
 
        return service.removeStudent(id);
     }
+
+    @GetMapping("/nativeSql")
+    public List<Student> getStudents(@RequestParam String stream){
+
+        return service.findStudentByNative(stream);
+    }
 }

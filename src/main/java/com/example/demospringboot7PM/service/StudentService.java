@@ -50,4 +50,9 @@ public class StudentService {
 
         return repository.findBySection(section);
     }
+
+    public List<Student> findStudentByNative(String stream){
+
+        return repository.findStudentsByNativeQuery(stream);
+    }
 }
