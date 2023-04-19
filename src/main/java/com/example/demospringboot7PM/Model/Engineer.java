@@ -9,6 +9,7 @@ import javax.persistence.Id;
 public class Engineer {
     @Id
      @GeneratedValue
+     long id;
     String name;
     int age;
 

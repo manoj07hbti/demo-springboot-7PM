@@ -1,20 +1,24 @@
-package com.example.demospringboot7PM.controller.Doctor;
+package com.example.demospringboot7PM.Model;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name="Doctor_DB")
+@Entity(name="DOCTOR_DB")
 public class Doctor {
-   @Id
+
+    @Id
     @GeneratedValue
+     long id;
     String name;
     int age;
     @Column(name="Specialist")
+
     String city;
 
-
+    // default constructor
 
     public Doctor() {
     }

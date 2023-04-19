@@ -1,5 +1,6 @@
 package com.example.demospringboot7PM.controller.Doctor;
 
+import com.example.demospringboot7PM.Model.Doctor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
