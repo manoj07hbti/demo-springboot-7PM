@@ -25,5 +25,12 @@ public class EngineerDbController {
         return engService.getAllEng();
     }
 
-
+    @GetMapping("/getEngineerUsingId")
+    public Engineer getByEmpId(@RequestParam long empId){
+        return engService.getByEmpId(empId);
+    }
+    @GetMapping("/getUsingSql/{department}")
+    public List<Engineer> getUsingEngineerDepartment(@PathVariable String department){
+        return engService.getUsingEngineerDepartment(department);
+    }
 }

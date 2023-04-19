@@ -32,5 +32,17 @@ public class StudentDbCRUDController {
         return service.getUsingRoll_no(rollNo);
     }
 
+    @GetMapping("/getUsingName/{name}")
+    public List<Student> getUsingName(@PathVariable String name){
+
+        return service.getUsingName(name);
+    }
+
+    @GetMapping("/getBetweenRollNo")
+    public List<Student> getBetweenRoll(@RequestParam int from, @RequestParam int to){
+
+        return service.getBetweenRollNo(from , to);
+    }
+
 
 }

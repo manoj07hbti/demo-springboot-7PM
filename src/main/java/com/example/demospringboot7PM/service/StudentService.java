@@ -30,4 +30,14 @@ public class StudentService {
         return repository.findByRollNo(rollNo);
     }
 
+    public List<Student> getUsingName(String name){
+
+        return repository.findByName(name);
+    }
+
+    public List<Student> getBetweenRollNo(int from , int to){
+
+        return repository.findBetweenRollNo(from,to);
+    }
+
 }

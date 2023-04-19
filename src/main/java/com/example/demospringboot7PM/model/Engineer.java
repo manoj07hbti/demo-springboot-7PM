@@ -6,9 +6,9 @@ import javax.persistence.*;
 public class Engineer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "Id")
-    @SequenceGenerator(name = "Id",sequenceName = "Id",initialValue = 1,allocationSize = 1)
-    long Id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "empId")
+    @SequenceGenerator(name = "empId",sequenceName = "empId",initialValue = 1,allocationSize = 1)
+    long empId;
 
     String name;
     String department;
@@ -16,18 +16,18 @@ public class Engineer {
     public Engineer() {
     }
 
-    public Engineer(long id, String name, String department) {
-        Id = id;
+    public Engineer(long empId, String name, String department) {
+        this.empId = empId;
         this.name = name;
         this.department = department;
     }
 
-    public long getId() {
-        return Id;
+    public long getEmpId() {
+        return empId;
     }
 
-    public void setId(long id) {
-        Id = id;
+    public void setEmpId(long empId) {
+        this.empId = empId;
     }
 
     public String getName() {
