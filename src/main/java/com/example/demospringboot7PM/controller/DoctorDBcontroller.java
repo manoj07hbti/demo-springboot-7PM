@@ -15,8 +15,30 @@ public class DoctorDBcontroller {
         public String add(@RequestBody DoctorOracleTable doctor){
         service.add(doctor);
         return "Doctor added successfully";
-
     }
+    @GetMapping("/Doctors/{name}")
+    public DoctorOracleTable getname(@PathVariable String name){
+       return service.getname(name);
+    }
+    @GetMapping("/Doctorid/{doctorId}")
+    public DoctorOracleTable getdoctorId(@PathVariable int doctorId){
+        return service.getdoctorId(doctorId);
+    }
+    @GetMapping("/DoctoridName/{id}/{name}")
+    public DoctorOracleTable getIdname(@PathVariable long id, @PathVariable String name){
+        return service.getIdname(id, name);
+    }
+    @GetMapping("/Doctorservicedepartment/{servicedepartment}")
+    public List<DoctorOracleTable> getservicedepartment(@PathVariable String servicedepartment){
+        return service.getservicedepartment(servicedepartment);
+    }
+    @GetMapping("/Doctoridservicedepartment/{id}/{servicedepartment}")
+    public List<DoctorOracleTable> getidservicedepartment(@PathVariable long id, @PathVariable String servicedepartment){
+        return service.getidservicedepartment(id, servicedepartment);
+    }
+
+
+
     @GetMapping("/Doctor read")
     public List<DoctorOracleTable> read(){
         return service.read();
