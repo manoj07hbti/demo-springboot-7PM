@@ -1,6 +1,6 @@
 package com.example.demospringboot7PM.controller;
 
-import com.example.demospringboot7PM.employee.Employee;
+import com.example.demospringboot7PM.modal.Employee;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

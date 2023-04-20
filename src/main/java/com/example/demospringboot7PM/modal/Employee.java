@@ -1,4 +1,4 @@
-package com.example.demospringboot7PM.employee;
+package com.example.demospringboot7PM.modal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +13,8 @@ public class Employee {
     String name;
     int age;
     String department;
+
+
 
     public Employee(String name, int age, String department) {
         this.name = name;

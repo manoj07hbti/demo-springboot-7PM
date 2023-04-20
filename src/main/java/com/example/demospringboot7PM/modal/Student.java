@@ -1,11 +1,25 @@
-package com.example.demospringboot7PM.student;
+package com.example.demospringboot7PM.modal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity(name="STUDENT_7PM")
 public class Student {
+
+    @Id
+    @GeneratedValue
+
+    Long id;
     String name;
     int age;
+
+    @Column(name="Stream")
     String section;
+
+    public Student() {
+    }
 
     public Student(String name, int age, String section) {
         this.name = name;

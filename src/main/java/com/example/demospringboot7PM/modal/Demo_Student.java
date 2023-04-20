@@ -1,4 +1,4 @@
-package com.example.demospringboot7PM.student;
+package com.example.demospringboot7PM.modal;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

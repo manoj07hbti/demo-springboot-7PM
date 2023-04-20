@@ -1,4 +1,4 @@
-package com.example.demospringboot7PM.doctor;
+package com.example.demospringboot7PM.modal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +14,9 @@ public class Doctor {
     String specialist;
     String hospital;
 
+    public Doctor() {
+    }
+
     public Doctor(String name, int age, String specialist, String hospital) {
         this.name = name;
         this.age = age;
@@ -21,8 +24,6 @@ public class Doctor {
         this.hospital = hospital;
     }
 
-    public Doctor() {
-    }
 
     public String getName() {
         return name;
