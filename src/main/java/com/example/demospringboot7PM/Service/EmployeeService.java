@@ -47,7 +47,7 @@ public class EmployeeService {
       }
       public Employee getEmployee(String city,String department){
 
-        return repository.FindByCityAndDepartment(city,department);
+        return repository.findByCityAndDept(city,department);
       }
 
 

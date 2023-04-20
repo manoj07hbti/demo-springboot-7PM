@@ -14,7 +14,7 @@ import java.util.List;
 
       public Employee findByIdAndName(long id,String name);
 
-     public Employee FindByCityAndDepartment(String city,String department);
+     public Employee findByCityAndDept(String city,String department);
 
         // Native SQL
 
