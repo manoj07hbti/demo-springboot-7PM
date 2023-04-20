@@ -26,6 +26,7 @@ public class DoctorService {
       repository.save(doctor);
       return "update doctor data successfully";
     }
+
     public String Doctorremove(long id){
         repository.deleteById(id);
         return "data delete successfully";

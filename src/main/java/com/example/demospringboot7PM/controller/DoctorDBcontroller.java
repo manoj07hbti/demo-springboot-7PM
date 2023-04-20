@@ -15,6 +15,7 @@ public class DoctorDBcontroller {
         public String add(@RequestBody DoctorOracleTable doctor){
         service.add(doctor);
         return "Doctor added successfully";
+
     }
     @GetMapping("/Doctor read")
     public List<DoctorOracleTable> read(){

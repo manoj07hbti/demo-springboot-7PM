@@ -15,9 +15,10 @@ public class EngineerService {
         repository.save(engineer);
         return "Engineer data add seccessfully";
     }
-    public List<EngineerTable> get(){
+    public List<EngineerTable> get() {
         return repository.findAll();
     }
+
     public String updateEngineerData(long id, String name){
         EngineerTable engineer=repository.getById(id);
         engineer.setName(name);

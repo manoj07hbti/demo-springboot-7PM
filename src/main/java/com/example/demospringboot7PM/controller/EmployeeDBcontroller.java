@@ -16,6 +16,8 @@ public class EmployeeDBcontroller {
         service.AddEmployee(employee);
           return "Employee Data successfully Added";
     }
+
+
     @GetMapping("/Employee read")
     public List<EmployeeOracleTable> get(){
        return service.get();

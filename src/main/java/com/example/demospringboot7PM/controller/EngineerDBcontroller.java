@@ -20,6 +20,8 @@ public class EngineerDBcontroller {
     public List<EngineerTable>get(){
         return service.get();
     }
+
+
     @PutMapping("/Engineer update/{id}/{name}")
     public String updateEngineerData(@PathVariable long id, @PathVariable String name){
         service.updateEngineerData(id ,name);
