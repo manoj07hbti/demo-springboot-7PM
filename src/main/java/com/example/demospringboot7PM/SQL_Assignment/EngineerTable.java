@@ -5,24 +5,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-
-public class EngineerOracleTable {
+public class EngineerTable {
     @Id
     @GeneratedValue
-     long id;
+    long id;
     String name;
     int age;
-    String Engineerdepartment;
+    String department;
 
-    public EngineerOracleTable() {
+    public EngineerTable() {
     }
 
-
-
-    public EngineerOracleTable(String name, int age, String engineerdepartment) {
+    public EngineerTable(String name, int age, String department) {
         this.name = name;
         this.age = age;
-        Engineerdepartment = engineerdepartment;
+        this.department = department;
     }
 
     public String getName() {
@@ -41,11 +38,11 @@ public class EngineerOracleTable {
         this.age = age;
     }
 
-    public String getEngineerdepartment() {
-        return Engineerdepartment;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setEngineerdepartment(String engineerdepartment) {
-        Engineerdepartment = engineerdepartment;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }

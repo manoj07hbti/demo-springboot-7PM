@@ -14,16 +14,16 @@ public class DoctorOracleTable {
     @Column(name="Hospital")// we can change servicedepartment to Hospital
     String servicedepartment;
     int doctorId;
-
+// we have created default constructor
     public DoctorOracleTable() {
     }
-
+// constructor use of name, servicedepartment, and doctorId
     public DoctorOracleTable(String name, String servicedepartment, int doctorId) {
         this.name = name;
         this.servicedepartment = servicedepartment;
         this.doctorId = doctorId;
     }
-
+// we have done getter setter
     public String getName() {
         return name;
     }
