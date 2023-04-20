@@ -1,7 +1,15 @@
 package com.example.demospringboot7PM.employee;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="Employee_7PM")
 public class Employee {
 
+    @Id
+    @GeneratedValue
+    long id;
     String name;
     int age;
     String department;
@@ -10,6 +18,10 @@ public class Employee {
         this.name = name;
         this.age = age;
         this.department = department;
+    }
+
+
+    public Employee() {
     }
 
     public String getName() {

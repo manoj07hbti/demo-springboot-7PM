@@ -1,5 +1,7 @@
 package com.example.demospringboot7PM.student;
 
+import javax.persistence.Entity;
+
 public class Student {
     String name;
     int age;
