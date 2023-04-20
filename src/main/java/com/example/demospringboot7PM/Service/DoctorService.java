@@ -34,7 +34,24 @@ public class DoctorService {
 
         return "delete data successfully";
     }
+    public Doctor getDoctor(long id,String city){
 
+      return  repository.findByIdAndCity(id,city);
+
+    }
+    public Doctor getDoctorByCity(String city){
+
+        return repository.findByCity(city);
+
+    }
+    public Doctor getDoctor(String name,String city){
+
+        return repository.findByNameAndCity(name,city);
+    }
+    public Doctor getDoctorByName(String name){
+
+        return repository.findByName(name);
+    }
 
 
 

@@ -40,7 +40,15 @@ public class EmployeeService {
 
         return "  data delete successfully";
       }
+      public Employee getEmployee(long id,String name){
 
+        return repository.findByIdAndName(id,name);
+
+      }
+      public Employee getEmployee(String city,String department){
+
+        return repository.FindByCityAndDepartment(city,department);
+      }
 
 
 

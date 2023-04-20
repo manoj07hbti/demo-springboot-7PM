@@ -28,6 +28,13 @@ public class EmployeeDBController {
         return  service.fetchAllEmployee();
 
     }
+    @GetMapping("/Employee/{id}/{name}")
+
+    public Employee getEmployee(@PathVariable long id,@PathVariable String name){
+
+       return service.getEmployee(id,name);
+    }
+
     @PutMapping("/employee/{Id}/{name}")
     public String  updateInfo(@PathVariable Long Id,@PathVariable String name){
 

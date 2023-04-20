@@ -26,8 +26,25 @@ public class DoctorDBController {
 
         return service.fetchAllDoctor();
     }
+     @GetMapping("/Doctor/{id}/{city}")
+    public Doctor getDoctor(@PathVariable long id,@PathVariable String city){
 
-    @PutMapping("/update_DB/{id}/{name}")
+      return  service.getDoctor(id,city);
+
+    }
+    @GetMapping("/doctor/{city}")
+
+    public Doctor getDoctor(@PathVariable String city){
+
+        return service.getDoctorByCity(city);
+    }
+    @GetMapping("/doctor_get/{name}/{city}")
+    public Doctor getDoctor(@PathVariable String name,@PathVariable String city){
+
+        return service.getDoctor(name,city);
+    }
+
+        @PutMapping("/update_DB/{id}/{name}")
     public String updateInfo(@PathVariable long id, @PathVariable String name) {
 
         return service.updateInfo(id, name);
