@@ -37,7 +37,10 @@ public class DoctorService {
         return "Doctor deleted Sucessesfully...";
     }
 
+    public Doctor getdoctor(long id,String specialist){
 
+      return repository.findByIdAndSpecialist(id, specialist);
+    }
 
 
 

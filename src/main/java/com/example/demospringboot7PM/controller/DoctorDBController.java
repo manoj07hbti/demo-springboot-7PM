@@ -24,6 +24,13 @@ public class DoctorDBController {
     public List<Doctor>fatchalldoctors(){
       return service.fatchalldoctor();
     }
+    @GetMapping("/doctor/{id}/{specialist}")
+    public Doctor getdoctor(@PathVariable long id,@PathVariable String specialist){
+        return service.getdoctor(id, specialist);
+
+    }
+
+
     @PutMapping("/doctor/{id}/{name}")
     public String updateinfo(@PathVariable long id,@PathVariable String name){
 

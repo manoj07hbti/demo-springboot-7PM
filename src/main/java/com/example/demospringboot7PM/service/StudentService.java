@@ -45,4 +45,9 @@ public class StudentService {
         repository.deleteById(id);
         return "Student deleted sucessesfully";
     }
+    public Student getstudent(long id,String name){
+       return repository.findByIdAndName(id, name);
+
+    }
+
 }

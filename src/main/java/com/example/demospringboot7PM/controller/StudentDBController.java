@@ -16,18 +16,24 @@ public class StudentDBController {
     StudentService service;
 
     @PostMapping("/student")
-    public String add(@RequestBody Student student){
+    public String add(@RequestBody Student student) {
 
         service.add(student);
         return "Student added Sucessesfully";
     }
 
     @GetMapping("/students")
-    public List<Student>fatchallstudent(){
+    public List<Student> fatchallstudent() {
 
-      return service.fatchallstudent();
+        return service.fatchallstudent();
     }
 
+    @GetMapping("/student/{id}/{name}")
+    public Student getstudent(@PathVariable long id,@PathVariable String name){
+
+        return service.getstudent(id, name);
+
+}
     @PutMapping("/student/{id}/{name}")
     public String updateinfo(@PathVariable long id,@PathVariable String name){
 
