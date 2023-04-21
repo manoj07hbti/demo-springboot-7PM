@@ -44,5 +44,10 @@ public class StudentDbCRUDController {
         return service.getBetweenRollNo(from , to);
     }
 
+    @GetMapping("/getBYNameAndDepartment")
+    public List<Student> getUsingNameAndDepartment(@RequestParam String name,@RequestParam String department){
+        return service.getUsingNameAndDepartment(name,department);
+    }
+
 
 }

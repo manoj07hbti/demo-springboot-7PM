@@ -13,7 +13,7 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
 
     //public List<Student> findByName(String name);
 
-    //Using nativeQuery
+    //TODO Using nativeQuery
     @Query(value = "SELECT * FROM student WHERE student_name =:name",nativeQuery = true)
     public List<Student> findByName(@Param("name") String name);
 
@@ -21,5 +21,7 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
 
     @Query(value = "SELECT * FROM student WHERE roll_no BETWEEN :from AND :to",nativeQuery = true)
     public List<Student> findBetweenRollNo(@Param("from") int from , @Param("to") int to);
+
+    public List<Student> findByNameAndDepartment(String name, String department);
 
 }

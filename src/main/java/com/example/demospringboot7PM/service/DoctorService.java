@@ -4,8 +4,7 @@ import com.example.demospringboot7PM.model.Doctor;
 import com.example.demospringboot7PM.repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.print.Doc;
 import java.util.List;
@@ -32,5 +31,32 @@ public class DoctorService {
 
         return docRepo.findByDocId(id);
     }
+
+//    public String dropTable(){
+//
+//        docRepo.dropTable();
+//
+//        return "table deleted";
+//    }
+
+
+    public String updateDepartment(long id,String department){
+
+        Doctor doctor=docRepo.findByDocId(id);
+
+        doctor.setDepartment(department);
+
+        docRepo.save(doctor);
+
+        return "Department updated successfully as: "+department;
+
+    }
+
+//    public String updateNameDepartment(long docId, String name,String department){
+//
+//        docRepo.updateNameAndDepartment(docId,name,department);
+//
+//        return "Department updated successfully Name as: "+name+" and Department as:"+department;
+//    }
 
 }

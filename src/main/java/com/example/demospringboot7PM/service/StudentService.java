@@ -40,4 +40,8 @@ public class StudentService {
         return repository.findBetweenRollNo(from,to);
     }
 
+    public List<Student> getUsingNameAndDepartment(String name, String department){
+        return repository.findByNameAndDepartment(name,department);
+    }
+
 }
