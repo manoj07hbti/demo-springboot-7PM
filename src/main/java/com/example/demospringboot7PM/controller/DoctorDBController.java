@@ -2,20 +2,40 @@ package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.modal.Doctor;
 import com.example.demospringboot7PM.repository.DoctorRepository;
+import com.example.demospringboot7PM.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class DoctorDBController {
 
     @Autowired
-    DoctorRepository repository;
+    DoctorService service;
+
     @PostMapping("/doctor")
     public String add(@RequestBody Doctor doctor){
 
-        repository.save(doctor);
+        service.add(doctor);
         return "Doctor added Sucessesfull";
     }
+    @GetMapping("/doctors")
+    public List<Doctor>fatchalldoctors(){
+      return service.fatchalldoctor();
+    }
+    @PutMapping("/doctor/{id}/{name}")
+    public String updateinfo(@PathVariable long id,@PathVariable String name){
+
+       return service.updateinfo(name, id);
+
+    }
+    @DeleteMapping("/doctor/{id}")
+    public String removedata(@PathVariable long id){
+
+       return service.removedata(id);
+    }
+
+
+
 }

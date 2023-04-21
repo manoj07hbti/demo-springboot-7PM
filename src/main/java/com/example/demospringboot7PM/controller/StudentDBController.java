@@ -2,24 +2,41 @@ package com.example.demospringboot7PM.controller;
 
 import com.example.demospringboot7PM.repository.StudentRepository;
 import com.example.demospringboot7PM.modal.Student;
+import com.example.demospringboot7PM.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.security.Provider;
+import java.util.List;
 
 @RestController
 public class StudentDBController {
 
     @Autowired
-    StudentRepository repository;
+    StudentService service;
+
     @PostMapping("/student")
     public String add(@RequestBody Student student){
 
-        repository.save(student);
-
+        service.add(student);
         return "Student added Sucessesfully";
     }
 
+    @GetMapping("/students")
+    public List<Student>fatchallstudent(){
 
+      return service.fatchallstudent();
+    }
 
+    @PutMapping("/student/{id}/{name}")
+    public String updateinfo(@PathVariable long id,@PathVariable String name){
+
+        return service.updateinfo(id,name);
+    }
+
+    @DeleteMapping("/student/{id}")
+    public String removedata(@PathVariable long id){
+
+        return service.removedata(id);
+    }
 }
