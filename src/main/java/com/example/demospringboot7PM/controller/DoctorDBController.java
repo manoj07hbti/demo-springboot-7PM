@@ -52,6 +52,7 @@ public class DoctorDBController {
     }
 
     @DeleteMapping("/delete_doc/{id}")
+
     public String remove(@PathVariable long id) {
 
         return service.removeDoctor(id);
