@@ -1,11 +1,9 @@
 package com.example.demospringboot7PM.service;
 
-import com.example.demospringboot7PM.SQL_Assignment.DoctorOracleTable;
+import com.example.demospringboot7PM.modelClass.DoctorOracleTable;
 import com.example.demospringboot7PM.repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 

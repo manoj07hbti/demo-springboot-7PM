@@ -1,6 +1,6 @@
 package com.example.demospringboot7PM.controller;
 
-import com.example.demospringboot7PM.SQL_Assignment.EmployeeOracleTable;
+import com.example.demospringboot7PM.modelClass.EmployeeOracleTable;
 import com.example.demospringboot7PM.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

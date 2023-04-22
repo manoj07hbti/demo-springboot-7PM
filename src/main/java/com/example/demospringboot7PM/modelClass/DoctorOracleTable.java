@@ -1,4 +1,4 @@
-package com.example.demospringboot7PM.SQL_Assignment;
+package com.example.demospringboot7PM.modelClass;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,11 +1,9 @@
 package com.example.demospringboot7PM.service;
 
-import com.example.demospringboot7PM.SQL_Assignment.EmployeeOracleTable;
-import com.example.demospringboot7PM.controller.EmployeeDBcontroller;
+import com.example.demospringboot7PM.modelClass.EmployeeOracleTable;
 import com.example.demospringboot7PM.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.example.demospringboot7PM.service;
 
-import com.example.demospringboot7PM.SQL_Assignment.EngineerTable;
+import com.example.demospringboot7PM.modelClass.EngineerTable;
 import com.example.demospringboot7PM.repository.EngineerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

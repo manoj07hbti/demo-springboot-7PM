@@ -1,6 +1,6 @@
 package com.example.demospringboot7PM.controller;
 
-import com.example.demospringboot7PM.SQL_Assignment.EngineerTable;
+import com.example.demospringboot7PM.modelClass.EngineerTable;
 import com.example.demospringboot7PM.service.EngineerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

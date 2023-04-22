@@ -1,6 +1,6 @@
 package com.example.demospringboot7PM.controller;
 
-import com.example.demospringboot7PM.SQL_Assignment.DoctorOracleTable;
+import com.example.demospringboot7PM.modelClass.DoctorOracleTable;
 import com.example.demospringboot7PM.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
