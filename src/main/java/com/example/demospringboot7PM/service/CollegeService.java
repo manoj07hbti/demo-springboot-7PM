@@ -33,5 +33,8 @@ public class CollegeService {
     public List<CollegeManagement> readCategorywithname(String category, String collegename ){
         return repository.findByCategoryAndCollegename(category,collegename);
         }
+    public List<CollegeManagement>readwithcategory(String category){
+        return repository.findByCategory(category);
+    }
 
 }

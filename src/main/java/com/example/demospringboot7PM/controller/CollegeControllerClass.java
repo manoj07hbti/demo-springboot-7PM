@@ -35,4 +35,8 @@ public class CollegeControllerClass {
     public List<CollegeManagement> readCategorywithname(@PathVariable String category, @PathVariable String collegename ){
         return service.readCategorywithname(category, collegename);
     }
+    @GetMapping("/Get Category/{category}")
+    public List<CollegeManagement>readwithcategory(@PathVariable String category){
+        return service.readwithcategory(category);
+    }
 }

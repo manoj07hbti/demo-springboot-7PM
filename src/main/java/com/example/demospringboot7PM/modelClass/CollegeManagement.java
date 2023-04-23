@@ -6,6 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class CollegeManagement {
 
+
     @Id
     @GeneratedValue
     long id;
