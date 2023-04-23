@@ -10,6 +10,7 @@ public interface CollegeRepository extends JpaRepository<CollegeManagement, Long
     we should be able to find all Tech College  in ascending order with name*/
 
     public CollegeManagement findByCollegenameAndCategory(String collegename, String category);
+
     public List<CollegeManagement> findByCategoryAndCollegename(String category, String collegename);
 
 }

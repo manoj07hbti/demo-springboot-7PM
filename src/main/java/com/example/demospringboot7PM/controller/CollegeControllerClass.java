@@ -11,6 +11,7 @@ import java.util.List;
 public class CollegeControllerClass {
     @Autowired
     CollegeService service;
+
     @PostMapping("/College Add")
     public String AddCollegeName(@RequestBody CollegeManagement college){
         service.AddCollegeName(college);

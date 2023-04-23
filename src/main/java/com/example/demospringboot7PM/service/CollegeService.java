@@ -23,6 +23,7 @@ public class CollegeService {
         college.setCategory(category);
         repository.save(college);
         return "Category updated Successfully";
+
     }
     public String Delete(long id){
         repository.deleteById(id);
