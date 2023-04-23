@@ -39,19 +39,15 @@ public class DoctorService {
 
             return "Data deleted Successfully ...";
         }
-    public DoctorTest getDoctorTest(long id , String city){
 
-        return repository.findByIdAndcity(id,city);
-    }
-
-    public List<DoctorTest> getDoctorTestBydept(String dept){
-
-        return repository.findBydept(dept);
-    }
 
     public List<DoctorTest> findDoctorTestByNative(String city){
 
         return repository.findDoctorTestByNativeQuery(city);
+    }
+    public List<DoctorTest> findDoctorTestByNativedept(String dept){
+
+        return repository.findDoctorTestByNativedept(dept);
     }
 
     }

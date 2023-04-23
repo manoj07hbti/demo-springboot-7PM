@@ -52,4 +52,9 @@ public class DoctorDBController {
 
         return service.findDoctorTestByNative(city);
     }
+    @GetMapping("/nativeSqlDept")
+    public List<DoctorTest> getDoctorTestDept(@RequestParam String dept){
+
+        return service.findDoctorTestByNativedept(dept);
+    }
 }
