@@ -1,6 +1,7 @@
 package com.example.demospringboot7PM.Service;
 
 import com.example.demospringboot7PM.Model.Employee;
+import com.example.demospringboot7PM.Model.Library;
 import com.example.demospringboot7PM.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,8 +9,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class EmployeeService {
+   @Service
+   public class EmployeeService {
    @Autowired
     EmployeeRepository repository;
     public String add(Employee employee){
@@ -44,10 +45,6 @@ public class EmployeeService {
 
         return repository.findByIdAndName(id,name);
 
-      }
-      public Employee getEmployee(String city,String department){
-
-        return repository.findByCityAndDept(city,department);
       }
 
 
