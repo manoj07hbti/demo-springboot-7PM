@@ -39,4 +39,9 @@ public class CollegeControllerClass {
     public List<CollegeManagement>readwithcategory(@PathVariable String category){
         return service.readwithcategory(category);
     }
+    @GetMapping("/Tech collegesql")
+    public List<CollegeManagement> gettechCollege(@RequestParam String category){
+
+        return service.findtechCollege(category);
+    }
 }

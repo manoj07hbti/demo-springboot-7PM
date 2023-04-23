@@ -36,5 +36,9 @@ public class CollegeService {
     public List<CollegeManagement>readwithcategory(String category){
         return repository.findByCategory(category);
     }
+     public List<CollegeManagement> findtechCollege(String category){
+
+        return repository.findCategoryByNativeQuery(category);
+    }
 
 }
