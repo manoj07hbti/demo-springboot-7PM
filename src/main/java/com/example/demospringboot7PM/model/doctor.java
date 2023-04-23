@@ -1,5 +1,6 @@
 package com.example.demospringboot7PM.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,11 +9,13 @@ import javax.persistence.Id;
 @Entity(name = "doctor_7PM")
 public class doctor {
 
-    @Id
-    @GeneratedValue
+    @Id    //primary key and it will be unique
+    @GeneratedValue   //it will automatically generate id for every record
     long ID;
     String name;
     int age;
+
+
     String specialiazation;
 
     public doctor() {
