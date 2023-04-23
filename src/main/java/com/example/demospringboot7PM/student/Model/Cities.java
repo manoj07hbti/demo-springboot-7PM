@@ -1,4 +1,4 @@
-package com.example.demospringboot7PM.employee;
+package com.example.demospringboot7PM.student.Model;
 
 import java.util.Objects;
 

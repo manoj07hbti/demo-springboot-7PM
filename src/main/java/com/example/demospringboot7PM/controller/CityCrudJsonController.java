@@ -1,6 +1,6 @@
 package com.example.demospringboot7PM.controller;
 
-import com.example.demospringboot7PM.employee.Cities;
+import com.example.demospringboot7PM.student.Model.Cities;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

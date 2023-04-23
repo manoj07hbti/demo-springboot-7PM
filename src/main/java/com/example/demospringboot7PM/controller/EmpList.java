@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import com.example.demospringboot7PM.employee.Employee;
+import com.example.demospringboot7PM.student.Model.Employee;
 
 @RestController
 public class EmpList {

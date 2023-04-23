@@ -10,8 +10,8 @@ public class Doctor_Model {
     @Id //Primary key of the table
     @GeneratedValue //
 
-    long Doc_Id;
-    String Fname, Lname, Dept;
+    long id;
+    String Fname, Lname, dept;
 
     //Constructor for Database
 
@@ -19,7 +19,7 @@ public class Doctor_Model {
     }
 
     public Doctor_Model(String dept, String fname, String lname) {
-        this.Dept = dept;
+        this.dept = dept;
         this.Fname = fname;
         this.Lname = lname;
     }
@@ -27,12 +27,12 @@ public class Doctor_Model {
 
     public String getDept() {
 
-        return Dept;
+        return dept;
     }
 
     public void setDept(String dept) {
 
-        this.Dept = dept;
+        this.dept = dept;
     }
     public String getFname() {
 
