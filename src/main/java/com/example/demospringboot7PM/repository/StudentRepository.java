@@ -8,3 +8,4 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
     public Student findByIdAndName(long id,String name);
 
 }
+
