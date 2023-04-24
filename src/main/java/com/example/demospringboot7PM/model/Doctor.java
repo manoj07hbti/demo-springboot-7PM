@@ -1,11 +1,24 @@
 package com.example.demospringboot7PM.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "doctor_table")
 public class Doctor {
+    @Id
+    @GeneratedValue
+    long id;
+
+    public Doctor() {
+    }
+
     public Doctor(String name, int age, String department, String city) {
         this.name = name;
         this.age = age;
         this.department = department;
         this.city = city;
+
     }
 
     String name;
@@ -37,8 +50,8 @@ public class Doctor {
         this.department = department;
     }
 
-    public String getCity() {
-        return city;
+    public String getCity(String city) {
+        return this.city;
     }
 
     public void setCity(String city) {
