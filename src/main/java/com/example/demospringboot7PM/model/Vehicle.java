@@ -15,7 +15,7 @@ public class Vehicle {
 
     String vehicleName;
 
-    String type;
+    String vehicleClass;
     double price;
     @Column(name = "mile_per_liter")
     int milage;
@@ -57,12 +57,12 @@ public class Vehicle {
         this.brandName = brandName;
     }
 
-    public String getType() {
-        return type;
+    public String getVehicleClass() {
+        return vehicleClass;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setVehicleClass(String vehicleClass) {
+        this.vehicleClass = vehicleClass;
     }
 
     public double getPrice() {

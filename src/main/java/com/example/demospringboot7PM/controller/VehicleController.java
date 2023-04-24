@@ -32,6 +32,18 @@ public class VehicleController {
         return vehicleService.getWithBrandAndMilage(name,milage);
     }
 
+    @GetMapping("/getUsingTypeAndName/{vehicleType}/{brandName}")
+    public List<Vehicle> getByVehicleTypeAndBrandName(@PathVariable String vehicleType,@PathVariable String brandName){
+
+        return vehicleService.getByVehicleTypeAndBrandName(vehicleType,brandName);
+    }
+
+//    @PutMapping("/updateUsingColumn/{value}/{Id}")
+//    public String updateUsingColumn(@PathVariable double value,@PathVariable int id){
+//
+//        return vehicleService.updateUsingColumn(value,id);
+//    }
+
 
     @PutMapping("/updatePrice/{allotmentId}/{price}")
     public String updatePrice(@PathVariable int allotmentId,@PathVariable double price){

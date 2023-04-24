@@ -17,4 +17,9 @@ public interface VehicleRepository extends JpaRepository<Vehicle, Integer> {
     public List<Vehicle> findByBrandNameOrderByAsc(@Param("brandName") String brandName);
 
     //public List<Vehicle> findByBrandNameOrderByPriceAsc(String brandName);
+
+    public List<Vehicle> findByVehicleTypeAndBrandNameOrderByPriceAsc(String vehicleType,String brandName);
+
+//    @Query(value = "UPDATE vehicle SET PRICE =:value WHERE allotmentId=:id")
+//    public String updateUsingColumnName(@Param("value")double value,@Param("id")int id);
 }

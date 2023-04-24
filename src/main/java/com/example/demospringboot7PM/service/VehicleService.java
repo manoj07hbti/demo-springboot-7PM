@@ -32,6 +32,11 @@ public class VehicleService {
         return vehicleRepository.findByBrandNameAndMilage(brandName,milage);
     }
 
+    public List<Vehicle> getByVehicleTypeAndBrandName(String vehicleType,String brandName){
+
+        return vehicleRepository.findByVehicleTypeAndBrandNameOrderByPriceAsc(vehicleType,brandName);
+    }
+
 
     public String updatePrice(int allotmentId,double price){
 
@@ -42,6 +47,17 @@ public class VehicleService {
 
         return "Price updated successfully: "+price;
     }
+
+//    public String updateUsingColumn(double value,int id){
+//
+//
+//        Vehicle vehicle= vehicleRepository.getById(id);
+//        vehicle.setPrice(value);
+//
+//        vehicleRepository.save(vehicle);
+//
+//        return "Price updated successfully: "+value;
+//    }
 
     public String delete(int id){
 
