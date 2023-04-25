@@ -42,7 +42,10 @@ public class DoctorDBController {
 
        return service.removedata(id);
     }
-
+    @GetMapping("/nativesqlquery")
+    public List<Doctor>getdoctorbynative(@RequestParam String specialist){
+        return service.findByNativeQuery(specialist);
+    }
 
 
 }

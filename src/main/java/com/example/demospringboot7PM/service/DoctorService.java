@@ -41,8 +41,9 @@ public class DoctorService {
 
       return repository.findByIdAndSpecialist(id, specialist);
     }
-
-
+    public List<Doctor>findByNativeQuery(String specialist){
+        return findByNativeQuery(specialist);
+    }
 
 
 

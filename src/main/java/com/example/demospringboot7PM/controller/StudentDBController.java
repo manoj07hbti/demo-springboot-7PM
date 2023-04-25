@@ -45,4 +45,10 @@ public class StudentDBController {
 
         return service.removedata(id);
     }
+
+    @GetMapping("/nativesql")
+    public List<Student>getbyNative(@RequestParam String stream){
+
+       return service.findStudentByNative(stream);
+    }
 }
