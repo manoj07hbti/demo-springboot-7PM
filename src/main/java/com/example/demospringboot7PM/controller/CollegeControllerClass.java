@@ -44,4 +44,12 @@ public class CollegeControllerClass {
 
         return service.findtechCollege(category);
     }
+    @GetMapping("/Ascending order")
+    public List<CollegeManagement>getAscending(){
+        return service.getAscending();
+    }
+    @GetMapping("/Descending order")
+    public List<CollegeManagement> getDescending(){
+        return service.getDescending();
+    }
 }

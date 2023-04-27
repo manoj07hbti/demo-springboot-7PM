@@ -40,5 +40,11 @@ public class CollegeService {
 
         return repository.findCategoryByNativeQuery(category);
     }
+    public List<CollegeManagement>getAscending(){
+        return repository.findByOrderByCollegenameAsc();
+    }
+    public List<CollegeManagement> getDescending(){
+        return repository.findByOrderByCollegenameDesc();
+    }
 
 }

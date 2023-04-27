@@ -15,7 +15,12 @@ public interface CollegeRepository extends JpaRepository<CollegeManagement, Long
 
     public List<CollegeManagement> findByCategoryAndCollegename(String category, String collegename);
     public List<CollegeManagement> findByCategory(String category);
-//we should be able to find all Tech College  in ascending order with name
+
+    //we should be able to find all Tech College  in ascending order with name
+    public List<CollegeManagement> findByOrderByCollegenameAsc();
+    //we should be able to find all Tech College  in Descending  order with name
+    public List<CollegeManagement> findByOrderByCollegenameDesc();
+
     @Query(value = "select * from COLLEGE_MANAGEMENT where CATEGORY=Technical",nativeQuery=true)
     public List<CollegeManagement> findCategoryByNativeQuery(@Param("category") String category);
 
