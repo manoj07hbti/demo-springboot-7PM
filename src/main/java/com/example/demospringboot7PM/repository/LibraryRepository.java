@@ -11,6 +11,7 @@ public interface LibraryRepository extends JpaRepository<Libraries, Long>{
      public Libraries findByTitleofbook(String titleofbook);
      public List<Libraries> findByTitleofbookAndAdditions(String titleofbook, String additions);
      public List<Libraries> findByCategory(String category);
+     public List<Libraries> findByOrderByTitleofbookAsc();
 
 
 }

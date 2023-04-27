@@ -66,6 +66,10 @@ public class LibraryController {
         service.deleteid(id);
         return "Id deleted successfully";
     }
+    @GetMapping("/Ascending order library")
+    public List<Libraries> getAscending(){
+        return service.getAscending();
+    }
 
 
 }

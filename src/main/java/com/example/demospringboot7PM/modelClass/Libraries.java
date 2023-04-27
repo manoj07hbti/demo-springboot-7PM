@@ -13,7 +13,6 @@ public class Libraries {
     String author;
     String additions;
     String category;
-
     public Libraries() {
     }
 

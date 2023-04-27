@@ -66,4 +66,7 @@ public class LibraryService {
         repository.deleteById(id);
         return "Id deleted successfully";
     }
+    public List<Libraries> getAscending(){
+        return repository.findByOrderByTitleofbookAsc();
+    }
 }
