@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
-public class Test_BookManagmentSystem {
+public class Test_BookApplication {
 
     ArrayList<Book>books=new ArrayList<>();
 
@@ -15,6 +15,8 @@ public class Test_BookManagmentSystem {
         books.add(book);
         return "book added sucessesfully...";
     }
+
+
     @PostMapping("/books/{name}/{page}/{writer_name}/{subject}")
     public String addbook(@PathVariable String name,@PathVariable int page,@PathVariable String writer_name,@PathVariable String subject){
         Book book=new Book(name,page,writer_name,subject);
@@ -24,6 +26,7 @@ public class Test_BookManagmentSystem {
     public ArrayList<Book>getBooks(){
         return books;
     }
+
     @PutMapping("/update_book/{index}/{name}")
     public String update_data(@PathVariable int index,@PathVariable String name){
         Book book=books.get(index);
